@@ -264,7 +264,7 @@ const state = {
         {
             id: 11,
             lang: 'en',
-            title: 'Cmpleted Projects',
+            title: 'Completed Projects',
             description: 'Used programming languages:',
             projects: [
                 {
@@ -426,6 +426,20 @@ const state = {
                 }
             ]
         }
+    ],
+    view: [
+        {
+            id: 18,
+            lang: 'en',
+            buttonSimple: 'Simple view',
+            buttonFull: 'Full View'
+        },
+        {
+            id: 19,
+            lang: 'bg',
+            buttonSimple: 'Опростена автобиография',
+            buttonFull: 'Цялостна автобиография'
+        }
     ]
 };
 
@@ -465,6 +479,10 @@ const getters = {
     allCompletedCourses: (state) => {
         if (state.language === 'en') { return state.completedCourses[0] }
         else if (state.language === 'bg') { return state.completedCourses[1] }
+    },
+    allViews: (state) => {
+        if (state.language === 'en') { return state.view[0] }
+        else if (state.language === 'bg') { return state.view[1] }
     }
 };
 

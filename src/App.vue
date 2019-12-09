@@ -1,6 +1,14 @@
 <template>
   <div id="app">
     <div class="container grid">
+      <div class="pageViewCommandLine">
+        <button v-if="!simple" @click="changeToSimpleView">
+          {{ allViews.buttonSimple }}
+        </button>
+        <button v-if="simple" @click="changeToFullView">
+          {{ allViews.buttonFull }}
+        </button>
+      </div>
       <languageSelect />
       <top />
       <div class="row">
@@ -13,8 +21,8 @@
           <education />
         </div>
         <div class="col-5">
-          <portfolio />
-          <programmingSkills />
+          <portfolio v-if="!simple" />
+          <programmingSkills v-if="!simple" />
           <langauageSkills />
           <complatedCourses />
         </div>
@@ -34,8 +42,14 @@ import portfolio from "./components/portfolio.vue";
 import programmingSkills from "./components/programmingSkills.vue";
 import langauageSkills from "./components/langauageSkills.vue";
 import complatedCourses from "./components/complatedCourses.vue";
+import { mapGetters } from "vuex";
 export default {
   name: "app",
+  data() {
+    return {
+      simple: ""
+    };
+  },
   components: {
     top,
     languageSelect,
@@ -47,7 +61,16 @@ export default {
     programmingSkills,
     langauageSkills,
     complatedCourses
-  }
+  },
+  methods: {
+    changeToSimpleView() {
+      this.simple === "" ? (this.simple = "true") : (this.simple = "");
+    },
+    changeToFullView() {
+      this.simple === "true" ? (this.simple = "") : (this.simple = "true");
+    }
+  },
+  computed: mapGetters(["allViews"])
 };
 </script>
 
