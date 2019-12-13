@@ -18,9 +18,9 @@
       <div class="row">
         <div class="col-7">
           <workExpirience />
-          <education />
         </div>
-        <div class="col-5">
+        <div class="col-5" id="rightSide">
+          <education />
           <portfolio v-if="!simple" />
           <programmingSkills v-if="!simple" />
           <langauageSkills />
@@ -155,6 +155,9 @@ body {
       font-size: 16px;
     }
   }
+}
+#rightSide > div ul {
+  margin-bottom: 0;
 }
 
 @media print {

@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss">
 header {
-  margin-bottom: 2rem;
+  margin-bottom: 10px;
   h6 {
     text-align: center;
     font-size: 0.8rem;

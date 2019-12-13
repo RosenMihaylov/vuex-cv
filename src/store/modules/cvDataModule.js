@@ -84,42 +84,151 @@ const state = {
             jobs: [
                 {
                     title: 'Chief Entertainer',
-                    years: '2014 - 2018',
-                    company: "'SL Entertainment' LTD",
-                    section: "Hotel 'Moonlight'",
-                    city: "Saint Vlas",
-                    mainResponsibilitiesTitle: 'Main Responsibilities:',
-                    mainResponsibilities: [
-                        'Supervising of the entertainment teams in Sunny Beach',
-                        'Creating the Entertainment program',
-                        'Hosting comedy talk show',
+                    modules: [
+                        {
+                            company: "'SL Entertainment' LTD",
+                            years: '2017 - 2018',
+                            section: "Hotel 'Moonlight'",
+                            city: "Saint Vlas",
+                            mainResponsibilitiesTitle: 'Main Responsibilities:',
+                            mainResponsibilities: [
+                                'Training the new recruits with over 10 top entertainers trained',
+                                'Creating the Entertainment program',
+                                'Hosting comedy talk show',
+                            ]
+                        }
                     ]
                 },
                 {
-                    title: 'Junior expert',
-                    years: '2005 - 2009 & 2012 - 2014',
-                    company: "Municipality of Targovishte",
-                    section: "Department 'Local tax collection'",
-                    city: "Targovishte",
-                    mainResponsibilitiesTitle: 'Main Responsibilities:',
-                    mainResponsibilities: [
-                        'Control over registering transfers of personal property',
-                        'Correspondence with government officials',
-                        'Customer service',
+                    title: 'Junior Replacement expert',
+                    modules: [
+                        {
+                            company: "'Social Assistance Directorate'",
+                            years: '2015-2016',
+                            section: "Department 'Application registration department'",
+                            city: "Targovishte",
+                            mainResponsibilitiesTitle: 'Main Responsibilities:',
+                            mainResponsibilities: [
+                                'Registration',
+                                'Analysis',
+                                'Correspondence',
+                            ]
+                        }
+                    ]
+                },
+                {
+                    title: 'Kids Entertainer',
+                    modules: [
+                        {
+                            company: "'Duni' LTD",
+                            years: '2013 - 2014',
+                            section: "Duni royal resort",
+                            city: "Sozopol",
+                            mainResponsibilitiesTitle: 'Main Responsibilities:',
+                            mainResponsibilities: [
+                                'Kids activities',
+                                'Kids Show',
+                                'Comedy show',
+                            ]
+                        }
+                    ]
+                },
+                {
+                    title: 'Office asistant',
+                    modules: [
+                        {
+                            company: "'Imoti I investicii'",
+                            years: '2006, 2012, 2013',
+                            section: "Section 'Front-office'",
+                            city: "Varna",
+                            mainResponsibilitiesTitle: 'Main Responsibilities:',
+                            mainResponsibilities: [
+                                "Organising data",
+                                'Archive',
+                                'Tipewriting',
+                            ]
+                        }
+                    ]
+                },
+                {
+                    title: 'Junior Replacement expert',
+                    modules: [
+                        {
+                            company: "Territorial Statistical Bureau",
+                            years: '2011- 2012',
+                            section: "Surveys at home",
+                            city: "Targovishte",
+                            mainResponsibilitiesTitle: 'Main Responsibilities:',
+                            mainResponsibilities: [
+                                'Surveys',
+                                'Document registration',
+                                'Statistical analysis',
+                            ]
+                        }
+                    ]
+                },
+                {
+                    title: 'Accountant Trainee',
+                    modules: [
+                        {
+                            company: "'LVK - Vinprom'",
+                            years: '2009-2010',
+                            section: "Section 'Wearhoese'",
+                            city: "Targovishte",
+                            mainResponsibilitiesTitle: 'Main Responsibilities:',
+                            mainResponsibilities: [
+                                "Recieving and dispatching cargo",
+                                'Casгier',
+                                'Junior accountant',
+                            ]
+                        }
                     ]
                 },
                 {
                     title: 'Freight forwarder',
-                    years: '2009 - 2012',
-                    company: "'Bioproduct international' LTD",
-                    section: "Section 'International cargo and delivery'",
-                    city: "Targovishte",
-                    mainResponsibilitiesTitle: 'Main Responsibilities:',
-                    mainResponsibilities: [
-                        'Corresponding with english speaking partners',
-                        'Preparing the necessary paperwork for cargo delivery under international convention TIR',
-                        'Junior accountent',
+                    modules: [
+                        {
+                            company: "'Bioproduct international'",
+                            years: '2008 - 209',
+                            section: "Section 'International cargo and delivery'",
+                            city: "Targovishte",
+                            mainResponsibilitiesTitle: 'Main Responsibilities:',
+                            mainResponsibilities: [
+                                'Corresponding with english speaking partners',
+                                'Preparing the necessary paperwork for cargo delivery under international convention TIR',
+                                'Junior accountant',
+                            ]
+                        }
                     ]
+                },
+                {
+                    title: 'Junior expert',
+                    modules: [
+                        {
+                            company: "Municipality of Targovishte",
+                            years: '2006 - 2008',
+                            section: "Department 'Local tax collection'",
+                            city: "Targovishte",
+                            mainResponsibilitiesTitle: 'Main Responsibilities:',
+                            mainResponsibilities: [
+                                'Registering transfers of personal property',
+                                'Correspondence with government officials',
+                                'Customer service',
+                            ]
+                        },
+                        {
+                            company: "Agency of Labour",
+                            years: '2005 - 2006',
+                            section: "Department 'Buro po truda'",
+                            city: "Targovishte",
+                            mainResponsibilitiesTitle: 'Main Responsibilities:',
+                            mainResponsibilities: [
+                                'Trainiee position',
+                                'Registrering and consulting unemployed people',
+                                'Archive',
+                            ]
+                        }
+                    ],
                 }
             ]
         },
@@ -129,43 +238,151 @@ const state = {
             title: 'Работен опит',
             jobs: [
                 {
-                    title: 'Главен аниматор',
-                    years: '2014 - 2018',
-                    company: "'Ес Ел Ентъртейнмънт' ЕООД",
-                    section: "Хотел 'Moonlight'",
-                    city: "Свети Влас",
-                    mainResponsibilitiesTitle: 'Осномви задължениия;',
-                    mainResponsibilities: [
-                        'Супервайзор за аниматорските екипи в района на Слънчев Бряг',
-                        'Съставяне и организиране на анимационната програма',
-                        'Водене на комедийни шоу програми',
+                    title: 'Главен Аниматор',
+                    modules: [
+                        {
+                            company: "'Ес Ел Ентъртейнмънт' ЕООД",
+                            years: '2017 - 2018',
+                            section: "Хотел 'Moonlight'",
+                            city: "Свети Влас",
+                            mainResponsibilitiesTitle: 'Основни отговорности:',
+                            mainResponsibilities: [
+                                'Трениране на младите аниматори, 10 от които станаха топ-аниматори в България',
+                                'Участие в създаването и координиране на спортната и тренировъчната програма',
+                                'Водене на комедийно шоу',
+                            ]
+                        }
                     ]
                 },
                 {
-                    title: 'Младши експерт',
-                    years: '2005 - 2009 & 2012 - 2014',
-                    company: "Община Търговище",
-                    section: "Отдел 'Местни данъци и такси'",
-                    city: "Търговище",
-                    mainResponsibilitiesTitle: 'Осномви задължениия;',
-                    mainResponsibilities: [
-                        'Приемане на декларации за регистрация на новопридобито имущество',
-                        'Кореспонденция с други държавни институции',
-                        'Консултиране на граждани отностно местните данъци и такси',
+                    title: 'Младши експерт по заместване',
+                    modules: [
+                        {
+                            company: "Агенция за социално подпомагане",
+                            years: '2015-2016',
+                            section: "Регионална дирекция 'Социално Подпомагане'",
+                            city: "Търговище",
+                            mainResponsibilitiesTitle: 'Основни задължения:',
+                            mainResponsibilities: [
+                                'Регистрация',
+                                'Анализ',
+                                'Кореспонденция',
+                            ]
+                        }
+                    ]
+                },
+                {
+                    title: 'Детски аниматор',
+                    modules: [
+                        {
+                            company: "'Дюни' АД",
+                            years: '2013 - 2014',
+                            section: "Duni royal resort",
+                            city: "к.к. Дюни, общ. Созопол",
+                            mainResponsibilitiesTitle: 'Основин задължения:',
+                            mainResponsibilities: [
+                                'Детски спортни занимация, игри и дискотека',
+                                'Организиране на Детско шоу',
+                                'Участие в Комедийно шоу',
+                            ]
+                        }
+                    ]
+                },
+                {
+                    title: 'Офис асистент',
+                    modules: [
+                        {
+                            company: "'Имоти и инвестиции'",
+                            years: '2006, 2012, 2013',
+                            section: "Фронт офис",
+                            city: "Варна",
+                            mainResponsibilitiesTitle: 'Основни задължения:',
+                            mainResponsibilities: [
+                                "Организиране на базата данни",
+                                'Архив',
+                                'Въвеждане на данни',
+                            ]
+                        }
+                    ]
+                },
+                {
+                    title: 'Младши експерт по заместване',
+                    modules: [
+                        {
+                            company: "Национале статистически институт",
+                            years: '2011- 2012',
+                            section: "Териториална дирекция Търговище",
+                            city: "Търговище",
+                            mainResponsibilitiesTitle: 'Основни задължения:',
+                            mainResponsibilities: [
+                                'Анкети по домовете',
+                                'Въвеждане на данни',
+                                'Регистриране на спортните клубове в региона',
+                            ]
+                        }
+                    ]
+                },
+                {
+                    title: 'Стажант счетоводител',
+                    modules: [
+                        {
+                            company: "'ЛВК-Винпром'",
+                            years: '2009-2010',
+                            section: "Отдел 'Складова наличност'",
+                            city: "Търговище",
+                            mainResponsibilitiesTitle: 'Основни задължения:',
+                            mainResponsibilities: [
+                                "Приемане и предаване на товари",
+                                'Касиер',
+                            ]
+                        }
                     ]
                 },
                 {
                     title: 'Спедитор',
-                    years: '2009 - 2012',
-                    company: "'Биопродукт Интернешънъл' ЕООД",
-                    section: "Отдел 'Международен превоз на стоки'",
-                    city: "Търговище",
-                    mainResponsibilitiesTitle: 'Осномви задължениия;',
-                    mainResponsibilities: [
-                        'Кореспонденция и преговори с англо-говорящи партньори',
-                        'Оформяне на митнически документи за товари под режим TIR',
-                        'Младши счетоводител',
+                    modules: [
+                        {
+                            company: "'Bioproduct international'",
+                            years: '2008 - 209',
+                            section: "Отдел 'Спедиция под режим TIR'",
+                            city: "Търговище",
+                            mainResponsibilitiesTitle: 'Основни задължения:',
+                            mainResponsibilities: [
+                                'Кореспонденция с англоговорящи партньори',
+                                'Подготовка и доставка на документите, необходими за транспорт на стоки под режим TIR',
+                                'Асистент на счетоводителя',
+                            ]
+                        }
                     ]
+                },
+                {
+                    title: 'Младши експерт',
+                    modules: [
+                        {
+                            company: "Община Търговище",
+                            years: '2006 - 2008',
+                            section: "Отдел 'Местни данъци и такси'",
+                            city: "Търговище",
+                            mainResponsibilitiesTitle: 'Основин задължения:',
+                            mainResponsibilities: [
+                                'Регистриране на сделките с движимо и недвижимо имущество',
+                                'Кореспонденция с държавни институции',
+                                'Даване на консултации относно Закона за Местните данъци и такси',
+                            ]
+                        },
+                        {
+                            company: "Агенция по заетостта",
+                            years: '2005 - 2006',
+                            section: "Бюро по труда",
+                            city: "Търговище",
+                            mainResponsibilitiesTitle: 'Основни задължения:',
+                            mainResponsibilities: [
+                                'Стаж по "Старт в Кариерата"',
+                                'Регистрация на безработни',
+                                'Архив',
+                            ]
+                        }
+                    ],
                 }
             ]
         }
@@ -377,7 +594,7 @@ const state = {
         {
             id: 15,
             lang: 'en',
-            title: 'Langage Skills',
+            title: 'Language Skills',
             languages: [
                 'Bulgarian - Native',
                 'English - C1',

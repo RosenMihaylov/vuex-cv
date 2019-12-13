@@ -4,22 +4,30 @@
     <ul>
       <li v-for="expirience in allWorkExpirience.jobs" :key="expirience.id">
         <div class="box">
-          <h3 class="jobTitle">{{ expirience.title }}</h3>
-          <h3 class="jobYears">{{ expirience.years }}</h3>
-          <p class="jobCompany">{{ expirience.company }}</p>
-          <p class="jobSection">{{ expirience.section }}</p>
-          <p class="jobCity">{{ expirience.city }}</p>
-          <p class="mainResponsibilitiesTitie">
-            {{ expirience.mainResponsibilitiesTitle }}
-          </p>
-          <ol class="mainResponsibilities">
-            <li
-              v-for="(responsibility, r) in expirience.mainResponsibilities"
-              :key="r"
-            >
-              {{ responsibility }}
-            </li>
-          </ol>
+          <div class="jobTitle">
+            <h3 class="jobTitle">{{ expirience.title }}</h3>
+          </div>
+          <div
+            class="module box"
+            v-for="(module, m) in expirience.modules"
+            :key="m"
+          >
+            <p class="bold company">{{ module.company }}</p>
+            <p class="bold yearsWorked">{{ module.years }}</p>
+            <p class="section">{{ module.section }}</p>
+            <p class="city">{{ module.city }}</p>
+            <p class="mainResponsibilitiesTitie">
+              {{ module.mainResponsibilitiesTitle }}
+            </p>
+            <ol class="mainResponsibilities">
+              <li
+                v-for="(responsibility, r) in module.mainResponsibilities"
+                :key="r"
+              >
+                {{ responsibility }}
+              </li>
+            </ol>
+          </div>
         </div>
       </li>
     </ul>
@@ -37,40 +45,52 @@ export default {
 <style lang="scss">
 #workExpirience {
   width: 100%;
+  .jobTitle {
+    width: 100%;
+  }
+  .bold {
+    font-weight: 600;
+  }
   .box {
-    display: grid;
-    padding: 2px;
-    grid-template-columns: 45% 55%;
-    grid-template-areas:
-      "jobtiTitle jobYears "
-      "jobCompany jobResponsibilityTitle "
-      "jobSection jobResponsibilityes "
-      "jobCity jobResponsibilityes"
-      ". jobResponsibilityes";
-    .jobTitle {
-      grid-area: jobtiTitle;
-    }
-    .jobYears {
-      grid-area: jobYears;
-    }
-    .jobCompany {
-      grid-area: jobCompany;
-      font-weight: 600;
-    }
-    .mainResponsibilitiesTitie {
-      grid-area: jobResponsibilityTitle;
-    }
-    .jobSection {
-      grid-area: jobSection;
-    }
-    .jobCity {
-      grid-area: jobCity;
-    }
-    .mainResponsibilities {
-      grid-area: jobResponsibilityes;
-    }
-    ol {
-      padding: 0 0 0 15px;
+    margin-bottom: 35px;
+
+    .module.box {
+      display: grid;
+      padding: 2px;
+      grid-template-columns: 45% 55%;
+      width: 100%;
+      margin-bottom: 0;
+      grid-template-areas:
+        "jobtiTitle jobYears "
+        "jobCompany jobResponsibilityTitle "
+        "jobSection jobResponsibilityes "
+        "jobCity jobResponsibilityes"
+        ". jobResponsibilityes";
+      .jobTitle {
+        grid-area: jobtiTitle;
+      }
+      .jobYears {
+        grid-area: jobYears;
+      }
+      .jobCompany {
+        grid-area: jobCompany;
+        font-weight: 600;
+      }
+      .mainResponsibilitiesTitie {
+        grid-area: jobResponsibilityTitle;
+      }
+      .jobSection {
+        grid-area: jobSection;
+      }
+      .jobCity {
+        grid-area: jobCity;
+      }
+      .mainResponsibilities {
+        grid-area: jobResponsibilityes;
+      }
+      ol {
+        padding: 0 0 0 15px;
+      }
     }
   }
 }
