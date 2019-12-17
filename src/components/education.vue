@@ -61,6 +61,7 @@ export default {
       display: grid;
       padding: 2px;
       grid-template-columns: 45% 55%;
+      grid-column-gap: 5px;
       grid-template-areas:
         "speciality years"
         "degree mainCoursesTitle"

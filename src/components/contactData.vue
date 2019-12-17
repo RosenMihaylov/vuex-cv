@@ -1,15 +1,21 @@
 <template>
-  <div class="col-5">
-    <div id="contactData">
-      <h2 class="gridHeader">{{ allContactData.title }}</h2>
-      <div class="titles">
-        <p>{{ allContactData.phone.title }}</p>
-        <p>{{ allContactData.email.title }}</p>
+  <div class="col-5" id="contactData">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" id="contactDataTitle">
+          <h2>{{ allContactData.title }}</h2>
+        </div>
       </div>
-      <div class="texts">
-        <h3>{{ allContactData.phone.text }}</h3>
-        <h3>{{ allContactData.email.text }}</h3>
+      <div class="row">
+        <div class="col-12" id="contactDataInfo">
+          <p>{{ allContactData.phone.title }}</p>
+          <p class="bold">{{ allContactData.phone.text }}</p>
+          <p>{{ allContactData.email.title }}</p>
+          <p class="bold">{{ allContactData.email.text }}</p>
+        </div>
       </div>
+
+      <div></div>
     </div>
   </div>
 </template>
@@ -24,23 +30,24 @@ export default {
 
 <style lang="scss">
 #contactData {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr 3fr;
-  grid-template-rows: 1fr 1fr;
-  width: 100%;
-  h3 {
-    font-size: 1.2rem;
-    align-content: end;
-  }
-  .gridHeader {
-    grid-column: 1/5;
-  }
-  .titles {
-    grid-column: 1/2;
-  }
-  .texts {
-    grid-column: 2/5;
-    align-items: end;
+  width: calc(100% + 30px);
+  .row {
+    width: calc(100% + 15px);
+    margin-bottom: 0;
+    padding: 0 0 0 15px;
+    h2 {
+      width: 100%;
+    }
+    #contactDataInfo {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      grid-column-gap: 5px;
+    }
+    @media print {
+      #contactDataInfo {
+        grid-template-columns: 1fr 10fr;
+      }
+    }
   }
 }
 </style>

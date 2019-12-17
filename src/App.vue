@@ -25,6 +25,7 @@
           <programmingSkills v-if="!simple" />
           <langauageSkills />
           <complatedCourses />
+          <professionalAchievements />
         </div>
       </div>
     </div>
@@ -42,6 +43,7 @@ import portfolio from "./components/portfolio.vue";
 import programmingSkills from "./components/programmingSkills.vue";
 import langauageSkills from "./components/langauageSkills.vue";
 import complatedCourses from "./components/complatedCourses.vue";
+import professionalAchievements from "./components/professionalAchievements.vue";
 import { mapGetters } from "vuex";
 export default {
   name: "app",
@@ -60,7 +62,8 @@ export default {
     portfolio,
     programmingSkills,
     langauageSkills,
-    complatedCourses
+    complatedCourses,
+    professionalAchievements
   },
   methods: {
     changeToSimpleView() {
@@ -77,15 +80,12 @@ export default {
 <style lang="scss">
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  line-height: 1.6;
   padding: 1rem 1.5rem;
-
   .container {
     max-width: 1100px;
     margin: auto;
     padding: 0;
     overflow: hidden;
-
     .row {
       padding: 0;
       overflow: hidden;
@@ -111,7 +111,8 @@ body {
   h2 {
     font-size: 1.8rem;
     border-bottom: 1px solid grey;
-    margin-bottom: 1rem;
+    margin-bottom: 30px;
+    height: 2.3rem;
   }
   h3 {
     font-size: 1.1rem;
@@ -154,6 +155,9 @@ body {
     li {
       font-size: 16px;
     }
+  }
+  .bold {
+    font-weight: 500;
   }
 }
 #rightSide > div ul {

@@ -58,6 +58,7 @@ export default {
       display: grid;
       padding: 2px;
       grid-template-columns: 45% 55%;
+      grid-column-gap: 5px;
       width: 100%;
       margin-bottom: 0;
       grid-template-areas:

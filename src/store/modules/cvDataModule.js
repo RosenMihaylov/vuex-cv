@@ -570,7 +570,8 @@ const state = {
                 'SCSS',
                 'Responsive design',
                 'Photoshop',
-                'MS Office'
+                'MS Office',
+                'EXPRESS'
             ]
         },
         {
@@ -644,6 +645,26 @@ const state = {
             ]
         }
     ],
+    professionalAchievements: [
+        {
+            lang: 'en',
+            title: "Achievements",
+            achievements: [
+                "Trained 10 of the most succesfull entertainers in the country.",
+                "Completed the Front-End Fundamentals course with a number 1 score.",
+                'I have more than 20 years of practicing English in contacts with clients and business partners.'
+            ]
+        },
+        {
+            lang: 'bg',
+            title: "Постижения",
+            achievements: [
+                "Обучил съм 10 от най-добрите аниматори в България.",
+                'Завърших обучението по Front-End Fundamentals с най-висок резултат',
+                "Имам повече от 20 години опит в комуникацията със англо-говорящи клиенти и бизнес партньори."
+            ]
+        }
+    ],
     view: [
         {
             id: 18,
@@ -700,6 +721,10 @@ const getters = {
     allViews: (state) => {
         if (state.language === 'en') { return state.view[0] }
         else if (state.language === 'bg') { return state.view[1] }
+    },
+    allAchievements: (state) => {
+        if (state.language === 'en') {return state.professionalAchievements[0]}
+        else if (state.language === 'bg') { return state.professionalAchievements[1] }
     }
 };
 

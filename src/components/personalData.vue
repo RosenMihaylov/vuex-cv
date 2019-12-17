@@ -1,20 +1,25 @@
 <template>
   <div class="col-7" id="personalData">
-    <h2>{{ allPersonalData.title }}</h2>
-    <div id="picture">
-      <img src="../assets/rosenMihaylov.jpg" alt="your pic" />
+    <div class="container">
+      <div class="row">
+        <div class="col-12" id="personalDataTitle">
+          <h2>{{ allPersonalData.title }}</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2" id="personalDataPicture">
+          <img src="../assets/rosenMihaylov.jpg" alt="your pic" />
+        </div>
+        <div class="col-10" id="personalDataInfo">
+          <p>{{ allPersonalData.name.title }}</p>
+          <h3>{{ allPersonalData.name.text }}</h3>
+          <p>{{ allPersonalData.age.title }}</p>
+          <h3>{{ allPersonalData.age.text }}</h3>
+          <p>{{ allPersonalData.adress.title }}</p>
+          <h3>{{ allPersonalData.adress.text }}</h3>
+        </div>
+      </div>
     </div>
-    <div id="personalDataTitles">
-      <p>{{ allPersonalData.name.title }}</p>
-      <p>{{ allPersonalData.age.title }}</p>
-      <p>{{ allPersonalData.adress.title }}</p>
-    </div>
-    <div class="grid-collum-3-5">
-      <h3>{{ allPersonalData.name.text }}</h3>
-      <h3>{{ allPersonalData.age.text }}</h3>
-      <h3>{{ allPersonalData.adress.text }}</h3>
-    </div>
-    <div class="col-9"></div>
   </div>
 </template>
 
@@ -29,15 +34,44 @@ export default {
 
 <style lang="scss">
 #personalData {
-  display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
-
-  h2 {
-    grid-column: 1/6;
+  .container {
+    width: calc(100% + 30px);
+    .row {
+      width: 100%;
+      padding: 0 15px;
+      margin-bottom: 0;
+      #personalDataPicture {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      #personalDataInfo {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+      }
+    }
   }
-  #picture {
-    grid-column: 1/2;
-    align-self: center;
+  @media print {
+    .container {
+      width: calc(100% + 30px);
+      .row {
+        width: 100%;
+        margin-bottom: 0;
+        padding-right: 30px;
+        #personalDataTitle h2 {
+          width: calc(100%-30px);
+        }
+        #personalDataPicture {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        #personalDataInfo {
+          display: grid;
+          grid-template-columns: 1fr 5fr;
+        }
+      }
+    }
   }
 }
 </style>
