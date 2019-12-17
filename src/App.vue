@@ -2,11 +2,9 @@
   <div id="app">
     <div class="container grid">
       <div class="pageViewCommandLine">
-        <button v-if="!simple" @click="changeToSimpleView">
-          {{ allViews.buttonSimple }}
-        </button>
-        <button v-if="simple" @click="changeToFullView">
-          {{ allViews.buttonFull }}
+        <button @click="changeToSimpleView">
+          <span v-if="!simple"> {{ allViews.buttonSimple }}</span>
+          <span v-if="simple">{{ allViews.buttonFull }}</span>
         </button>
       </div>
       <languageSelect />
