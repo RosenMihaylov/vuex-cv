@@ -25,7 +25,7 @@
           <programmingSkills v-if="!simple" />
           <langauageSkills />
           <complatedCourses />
-          <professionalAchievements />
+          <professionalAchievements v-if="!simple" />
         </div>
       </div>
     </div>
