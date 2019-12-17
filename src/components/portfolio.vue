@@ -3,18 +3,10 @@
     <h2>
       {{ allPortfolios.title }}
     </h2>
-    <div class="box" v-for="(project, pr) in allPortfolios.projects" :key="pr">
-      <p>
-        {{ allPortfolios.description }}
-        <span v-for="(language, pcL) in project.usedProgramms" :key="pcL">
-          {{ language }}
-        </span>
-      </p>
-      <ol>
-        <li v-for="(link, li) in project.link" :key="li">
-          <a :href="link" target="_blank">{{ link }}</a>
-        </li>
-      </ol>
+    <div class="box">
+      <a href="https://rosen-mihaylov-portfolio.netlify.com/" target="_blank">
+        https://rosen-mihaylov-portfolio.netlify.com/</a
+      >
     </div>
   </div>
 </template>
@@ -36,6 +28,7 @@ export default {
       text-decoration: none;
       color: #000;
       font-weight: 500;
+      font-size: 1rem;
     }
   }
   span {
